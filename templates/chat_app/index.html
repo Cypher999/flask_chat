@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>R@T CHAT</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='grid_view.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/chat_app.css')}}">
+  </head>
+  <body>
+    <div class="main-chat-box col-sm-11 col-md-11 col-lg-6 col-xl-6">
+      {% for dt in data %}
+      {% if dt.tipe=='1' %}
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="col-sm-10 col-md-10 col-lg-8 col-xl-8 incoming-chat" style="float:left">
+              <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 sender-name">
+                <p>{{dt.nama_akun}}</p>
+              </div>
+              <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 chat-box">
+                <p>{{dt.isi_chat}}</p>
+              </div>
+              <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 datetime">
+                <p>{{dt.tanggal}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% elif dt.tipe=='2' %}
+
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 notif-container">
+            <div class="col-sm-10 col-md-10 col-lg-8 col-xl-8 join-notif">
+              <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 join-name" >
+                <p>{{dt.nama_akun}} telah bergabung</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+      {% endfor %}
+
+    </div>
+    <div class="main-chat-textbox col-sm-11 col-md-11 col-lg-6 col-xl-6">
+      <input type="text" class='chat-input col-sm-12 col-md-12 col-lg-6 col-xl-6' name='chat-input' placeholder="masukkan teks disini">
+      <input type="button" class='chat-button col-sm-4 col-md-4 col-lg-1 col-xl-1' value=">>">
+      <a href="{{url_for('logout')}}"><button class='chat-button col-sm-4 col-md-4 col-lg-1 col-xl-1'>logout</button></a>
+    </div>
+  </body>
+  <script type="text/javascript" src="{{url_for('static',filename='socket/socket.io.js')}}">
+
+  </script>
+  <script type="text/javascript" src="{{url_for('static',filename='js/chat_app.js')}}">
+  </script>
+</html>

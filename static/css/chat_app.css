@@ -1,0 +1,85 @@
+*{
+  font-family: arial;
+}
+.main-chat-box{
+  background-color: #4F4F4F;
+  padding:10px;
+  border: solid #4F4F4F 1px;
+  height: 400px;
+  transition: 1s;
+  overflow: auto;
+}
+.incoming-chat{
+  background: #0FBEF5;
+  padding: 3px;
+  border: solid #0FBEF5 1px;
+  border-radius: 10px;
+  margin-top:5px;
+  margin-bottom:5px;
+}
+
+.incoming-chat .sender-name p{
+  font-size: 12px;
+}
+.incoming-chat .datetime p{
+  font-size: 9px;
+  float: right;
+}
+
+.outcoming-chat{
+  background: #A1F8BE;
+  padding: 3px;
+  margin-top:5px;
+  margin-bottom:5px;
+  border: solid #0FBEF5 1px;
+  border-radius: 10px;
+}
+.notif-container{
+  margin-left:25%;
+}
+.join-notif{
+  background: #F0EBEB;
+  padding: 3px;
+  margin-top:5px;
+  margin-bottom:5px;
+  border: solid #F0EBEB 1px;
+  border-radius: 10px;
+  height: 25px;
+}
+.main-chat-textbox .chat-input{
+  width: 75%;
+  height: 25px;
+  border: 1px solid black;
+  border-radius: 25px;
+  padding: 5px;
+  display: inline;
+}
+.main-chat-textbox .chat-button{
+  display: inline;
+  height: 30px;
+  margin: 3px;
+  border: 1px solid black;
+  border-radius: 25px;
+}
+
+.join-notif p{
+  font-size: 10px;
+}
+
+.outcoming-chat .sender-name p{
+  font-size: 12px;
+}
+.outcoming-chat .datetime p{
+  font-size: 9px;
+  float: right;
+}
+
+
+.main-chat-textbox{
+  background-color: #4F4F4F;
+  padding:10px;
+  margin-top:10px;
+  border: solid #4F4F4F 1px;
+  height: 75px;
+  transition: 1s;
+}

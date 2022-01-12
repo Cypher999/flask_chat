@@ -1,0 +1,3 @@
+mysql.connector
+flask
+flask_socketio
