@@ -1,5 +1,5 @@
 # simple chat with python flask & socket
-![alt text](https://github.com/Cypher999/flask_chat/blob/master/screenshoot.png?raw=true)<br>
+![alt text](https://github.com/Cypher999/flask_chat/blob/main/screenshoot.png?raw=true)<br>
 This is python flask program to demonstrate how socket work for web based chat app
 
 ##### Requirements?
